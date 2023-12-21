@@ -18,7 +18,7 @@ class Solution {
         }
         
         if(reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE ){
-        return 0 ;
+             return 0 ;
         }
         return isNegative==true? reverse*(-1): reverse;
     }
