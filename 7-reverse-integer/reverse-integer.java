@@ -1,25 +1,21 @@
 class Solution {
     public int reverse(int x) {
-        boolean isNegative = x<0? true: false;
-        if(isNegative){
-            x = -x;
+       long rev = 0;
+        int original =x;
+        if(x<0){
+            original = -1*x;
         }
-        int reverse = 0;
-        while(x>0){
-        int rem = x%10;
-        if (reverse > Integer.MAX_VALUE / 10 || (reverse == Integer.MAX_VALUE / 10 && rem > 7)) {
-            return 0; // Return 0 if reversing x causes overflow
+        while(original>0){
+            int r = original%10;
+            rev = (rev*10)+r;
+            original /=10;
         }
-        if (reverse < Integer.MIN_VALUE / 10 || (reverse == Integer.MIN_VALUE / 10 && rem < -8)) {
-            return 0; // Return 0 if reversing x causes overflow
+        if(rev > Integer.MAX_VALUE || rev<Integer.MIN_VALUE){
+            return 0;
         }
-            reverse = (reverse *10)+rem;
-            x= x/10;
+        if(x<0){
+            return (int) rev*-1;
         }
-        
-        if(reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE ){
-             return 0 ;
-        }
-        return isNegative==true? reverse*(-1): reverse;
+        return (int)rev;
     }
 }
