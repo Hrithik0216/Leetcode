@@ -12,10 +12,9 @@ class Solution {
         }
 
         if (stack.isEmpty()) {
-            return "";  // Return an empty string if the stack is empty
+            return "";  
         }
 
-        // Change the loop condition to while (!stack.isEmpty())
         while (!stack.isEmpty()) {
             str.append(stack.pop());
         }
