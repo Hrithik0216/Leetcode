@@ -13,10 +13,10 @@ class Solution {
         }
 
         char [] chars = s.toCharArray();
-        int j=i; //j==0 or j=i
-        while(j<n && chars[j]!='a'){
-            chars[j]-=1;
-            j++;
+        
+        while(i<n && chars[i]!='a'){
+            chars[i]-=1;
+            i++;
         }
         return String.valueOf(chars);
     }
