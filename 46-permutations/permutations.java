@@ -13,7 +13,7 @@ class Solution {
         }
        
         for(int number: nums){
-            //To Skip if we get the same number
+            
             if(!tempList.contains(number)){
            
             tempList.add(number);
