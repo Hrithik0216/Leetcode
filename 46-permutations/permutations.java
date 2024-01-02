@@ -14,14 +14,14 @@ class Solution {
        
         for(int number: nums){
             //To Skip if we get the same number
-            if(tempList.contains(number)){
-            continue;
-            }
+            if(!tempList.contains(number)){
+           
             tempList.add(number);
 
             backtrack(nums, result, tempList);
 
             tempList.remove(tempList.size()-1);
+            }
         }
     }
 }
