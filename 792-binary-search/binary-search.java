@@ -8,11 +8,11 @@ class Solution {
     private int binaryRecursion(int low, int high, int target, int [] nums){
         if(low<=high){
             int mid = low+(high-low)/2;
-        
-         
+
         if(target==nums[mid]){
             return mid;
         }
+        
         if(target<nums[mid]){
             return binaryRecursion(low, mid-1, target, nums);
         }else {
