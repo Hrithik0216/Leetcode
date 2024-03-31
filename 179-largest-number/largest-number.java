@@ -1,5 +1,6 @@
 import java.util.*;
-//Comparator Interface is used. It has 2 methods, 1.compareTo 2.equals
+//Comparator Interface is used. It has 2 methods, 1.compareTo 2.equals.
+//The default Arrays.sort uses the mergeSort inside
 class Solution {
     public String largestNumber(int[] nums) {
         String [] s = new String[nums.length];
